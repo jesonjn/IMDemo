@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/llLocalView"
+        android:layout_width="100dip"
+        android:layout_height="100dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <com.jeson.imsdk.video.VideoStreamsView
+        android:id="@+id/viewinfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00000000"
+        android:scaleType="fitXY" />
+
+    <Button
+        android:id="@+id/calce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dip"
+        android:text="取消" />
+
+</RelativeLayout>

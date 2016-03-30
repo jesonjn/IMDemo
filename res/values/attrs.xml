@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TasksCompletedView">
+        <attr name="radius" format="dimension" />
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="circleColor" format="color" />
+        <attr name="ringColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="StateTextView">
+        <attr name="content" format="string" />
+        <attr name="state" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="SlidingMenu">
+        <attr name="rightPadding" format="dimension" />
+    </declare-styleable>
+
+    <string-array name="expressions">
+        <item>尴尬</item>
+        <item>哼哼</item>
+        <item>苦瓜脸</item>
+        <item>嘻嘻</item>
+        <item>媚眼</item>
+        <item>恐怖</item>
+        <item>纠结</item>
+        <item>亲亲</item>
+        <item>哎呀</item>
+        <item>悠闲</item>
+        <item>吃惊</item>
+        <item>口罩</item>
+        <item>呆滞</item>
+        <item>不屑</item>
+        <item>紧张</item>
+        <item>刺瞎</item>
+        <item>大哭</item>
+        <item>鬼脸</item>
+        <item>飞吻</item>
+        <item>怒火</item>
+    </string-array>
+    <string-array name="server_address">
+        <item>阿里云</item>
+        <item>测试</item>
+    </string-array>
+    <string-array name="send_bt_text">
+        <item>send_audio</item>
+        <item>send_picture</item>
+        <item>send_file</item>
+    </string-array>
+
+</resources>

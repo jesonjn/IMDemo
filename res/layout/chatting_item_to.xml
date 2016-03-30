@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    android:paddingBottom="8dp"
+    android:paddingLeft="6.0dip"
+    android:paddingRight="6.0dip" >
+
+    <TextView
+        android:id="@+id/chatting_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dip"
+        android:gravity="center"
+        android:paddingBottom="5dip"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:paddingTop="5dip"
+        android:textColor="#cccccc"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/kick_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dip"
+        android:gravity="center"
+        android:paddingBottom="5dip"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:paddingTop="5dip"
+        android:textColor="#ffffff"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dip"
+        android:layout_marginRight="5dip"
+        android:layout_marginTop="10dip" >
+
+        <ImageView
+            android:id="@+id/img_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip" />
+
+        <TextView
+            android:id="@+id/tv_audio_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/layout_chatmessage"
+            android:layout_marginRight="5dip"
+            android:layout_toLeftOf="@id/layout_chatmessage"
+            android:textColor="#999999"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/layout_chatmessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/msg_content_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chatting_bg_to"
+                android:gravity="left"
+                android:maxWidth="200dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:textColor="#ffffff"
+                android:textSize="16sp" >
+            </TextView>
+
+            <RelativeLayout
+                android:id="@+id/rl_send_file"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/iv_sendfile"
+                    android:layout_width="45dip"
+                    android:layout_height="50dip"
+                    android:layout_marginRight="5dip"
+                    android:scaleType="fitXY" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/iv_sendfile"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_file_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="middle"
+                        android:maxWidth="130dip"
+                        android:singleLine="true"
+                        android:textColor="#333333"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_file_size"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dip"
+                        android:textColor="#999999"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/pb_file"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="5dip"
+                    android:layout_below="@id/iv_sendfile"
+                    android:layout_marginTop="10dip"
+                    android:max="0"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+
+                <com.jeson.imdemo.MideoView
+                    android:id="@+id/file_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:maxHeight="100dip"
+                    android:scaleType="fitXY" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_chatting_audio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:id="@+id/medeoview_audio_linear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip" >
+
+                    <com.jeson.imdemo.MideoView
+                        android:id="@+id/mv_audio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/location_content_itv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:drawablePadding="5dip"
+                    android:textColor="#ffffff"
+                    android:textColorLink="#ffffff"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_vcard"
+                android:layout_width="160dip"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dip"
+                    android:layout_marginTop="2dip"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#9ea1a1" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dip"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:id="@+id/iv_vcard"
+                        android:layout_width="42dip"
+                        android:layout_height="42dip"
+                        android:scaleType="fitXY" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dip"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_vcard_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_vcard_dept"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/tv_vcard_job"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

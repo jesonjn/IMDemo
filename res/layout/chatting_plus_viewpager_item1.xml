@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dip"
+    android:background="#ebebeb"
+    android:orientation="vertical"
+    android:padding="5dip" >
+
+    <com.jeson.imdemo.PlusView
+        android:id="@+id/plus_item_up"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:padding="5dip"
+        android:weightSum="4" >
+    </com.jeson.imdemo.PlusView>
+
+    <com.jeson.imdemo.PlusView
+        android:id="@+id/plus_item_down"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:padding="5dip"
+        android:weightSum="4" >
+    </com.jeson.imdemo.PlusView>
+
+</LinearLayout>
